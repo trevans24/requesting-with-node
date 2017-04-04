@@ -5,7 +5,9 @@ var request = require('request');
 	request('http://www.omdbapi.com/?t=' + movieTitle, function(error, response, body){
 		// console.log(error);
 		// console.log(response);
-		console.log(body);
+		var parsed = JSON.parse(body);
+		console.log(parsed);
+		console.log('\n');
 
 	});
 
